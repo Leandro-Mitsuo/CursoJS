@@ -6,6 +6,11 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
 
+  const handleLogout = () => {
+    // Tentar fechar a aba
+    window.close();
+  };
+
   return (
     <>
       <div>
@@ -21,6 +26,9 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
+
+        <button onClick={handleLogout}>Sair</button>
+
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
