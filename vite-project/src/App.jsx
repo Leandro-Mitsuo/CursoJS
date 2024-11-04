@@ -1,10 +1,14 @@
 import { useState } from 'react'
+//import {useHistory} from 'react-router-dom'
+
+//import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import './Logout'
 
-
+/*
 ReactDOM.render(
   <Router>
     <Switch>
@@ -14,17 +18,18 @@ ReactDOM.render(
   </Router>,
   document.getElementById('root')
 );
+*/
 
 function App() {
   const [count, setCount] = useState(0)
-  const history = useHistory();
+  const history = 0//useHistory();
 
   const handleLogout = () => {
     // Tentar fechar a aba
     const confirmed = window.confirm("Você realmente deseja sair da aplicação?");
     if (confirmed) {
-      //window.close(); // Tenta fechar a aba
-      history.push('/logout'); // Altere para a rota que leva à sua página de saída
+      window.close(); // Tenta fechar a aba
+      //history.push('/logout'); // Altere para a rota que leva à sua página de saída
     }
   };
 
