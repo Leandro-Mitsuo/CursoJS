@@ -5,12 +5,14 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+  const history = useHistory();
 
   const handleLogout = () => {
     // Tentar fechar a aba
     const confirmed = window.confirm("Você realmente deseja sair da aplicação?");
     if (confirmed) {
-      window.close(); // Tenta fechar a aba
+      //window.close(); // Tenta fechar a aba
+      history.push('/logout'); // Altere para a rota que leva à sua página de saída
     }
   };
 
