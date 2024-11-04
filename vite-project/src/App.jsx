@@ -8,7 +8,10 @@ function App() {
 
   const handleLogout = () => {
     // Tentar fechar a aba
-    window.close();
+    const confirmed = window.confirm("Você realmente deseja sair da aplicação?");
+    if (confirmed) {
+      window.close(); // Tenta fechar a aba
+    }
   };
 
   return (
