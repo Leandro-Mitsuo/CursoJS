@@ -2,6 +2,18 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import './Logout'
+
+
+ReactDOM.render(
+  <Router>
+    <Switch>
+      <Route path="/" exact component={App} />
+      <Route path="/logout" component={Logout} />
+    </Switch>
+  </Router>,
+  document.getElementById('root')
+);
 
 function App() {
   const [count, setCount] = useState(0)
